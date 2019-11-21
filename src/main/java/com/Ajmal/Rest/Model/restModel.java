@@ -5,6 +5,7 @@ public class restModel {
 	
 	private int id;
 	private String name,address;
+	
 	public int getId() {
 		return id;
 	}

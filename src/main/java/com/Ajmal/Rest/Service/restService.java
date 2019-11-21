@@ -20,6 +20,12 @@ public class restService {
 	{
 		return rd.save(rm);
 	}
+	public restModel select_id(int id)
+	{
+		return rd.select_id(id);
+	}
+	
+	
 	public List<restModel> fechall()
 	{
 		return rd.findAll();
