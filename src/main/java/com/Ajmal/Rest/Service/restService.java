@@ -25,11 +25,13 @@ public class restService {
 		return rd.select_id(id);
 	}
 	
+	/*
 	
 	public List<restModel> fechall()
 	{
 		return rd.findAll();
 	}
 	
+*/
 
 }

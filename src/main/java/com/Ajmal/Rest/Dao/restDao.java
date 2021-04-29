@@ -50,7 +50,7 @@ public class restDao {
 	                rm.getName(), rm.getAddress());
 	    }
 	    
-	    
+	/*    
 	    public List<restModel> findAll() {
 	    	
 	    	return jdbcTemplate.query("select *from emp", new <restModel>RowMapper() {
@@ -70,7 +70,7 @@ public class restDao {
 	    }
 
 	    
-	    
+	  */  
 	 
 	
 

@@ -37,16 +37,24 @@ public class restController {
 		 
 		 LOGGER.info("Info level log message");
 		 
-		 	System.out.print("hello");
+		/* 	System.out.print("hello");
 
 	        rm.setName("ajmal");
 	        rm.setAddress("menayath");
 	        int b=rs.count();
-	        System.out.println("count"+b);
-	        return new ModelAndView("welcomePage");
+	        System.out.println("count"+b);*/
+	        return new ModelAndView("welcome");
 	
 
 	 }
+	 @RequestMapping("loginForm")
+	 public void login()	 
+	 {
+		 
+		 
+		 
+	 }
+	 
 	 @RequestMapping("/ajmal")
 	 public ModelAndView show(restModel rm)
 	 {
@@ -74,25 +82,7 @@ public class restController {
 		 	}
 		 return new ModelAndView("hello");
 	 }
-	 @RequestMapping(method = RequestMethod.POST, value="/all", produces = "application/json")
 	 
-	 @ResponseBody
-	 public List<restModel> fechall()
-	 {
-		 List<restModel> ob=rs.fechall();
-		 
-		 
-		 return ob;
-		/* 
-		 for (restModel restModel : ob) {
-			 
-			 System.out.println(restModel.getAddress());
-			 System.out.println(restModel.getName());
-
-			
-		}
-		 */
-	 }
 	 
 	 
 	@RequestMapping(method = RequestMethod.POST, value="/select_id/{regdNum}",produces = "application/json")
