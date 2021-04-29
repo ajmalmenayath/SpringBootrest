@@ -70,10 +70,12 @@ public class restController {
 		 	//rm.setId(12);
 		 	rm.setAddress("abcd");
 		 	rm.setName("ajmal2");
+		 	
 		 	int a=rs.save(rm);
 		 	if(a==1)
 		 	{
 		 		System.out.print("inserted");
+		 		System.out.println("Hello World");
 		 	}
 		 	else
 		 	{
