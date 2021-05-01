@@ -97,7 +97,7 @@ public class restController {
 
 	 	System.out.println(rm.getName());
 
-	 	System.out.println(""+rm.getAddress());
+	 	System.out.println("hi"+rm.getAddress());
 	
 		// return rs.select_id(id);
 		 
