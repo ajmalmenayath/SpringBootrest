@@ -7,9 +7,11 @@ import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.ui.Model;
 import org.springframework.context.ApplicationContext;
-
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -85,6 +87,11 @@ public class restController {
 		 return new ModelAndView("hello");
 	 }
 	 
+	 @PostMapping(value = "/products",produces = "application/json")
+	   public ResponseEntity<Object> createProduct(@RequestBody restModel rm) {
+	      System.out.println(rm.getAddress());
+	      return new ResponseEntity<>("Product is created successfully", HttpStatus.CREATED);
+	   }
 	 
 	 
 	@RequestMapping(method = RequestMethod.POST, value="/select_id/{regdNum}",produces = "application/json")

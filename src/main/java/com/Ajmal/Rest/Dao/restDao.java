@@ -31,7 +31,34 @@ public class restDao {
 	    }
 	    
 	    
-	    public restModel select_id(int id)
+	    public restModel select_id(int id) {
+			 String sql = "SELECT * FROM emp WHERE ID = ?";
+			 return this.getJdbcTemplate().queryForObject(
+			            sql,new Object[]{id},
+			            (rs, rowNum) ->
+			                    new restModel(
+			                            
+			                    		
+			                    		rs.getInt("id"),
+			                    		rs.getString("name"),
+			                    		rs.getString("address")
+			                    		
+
+			                            
+			                    )
+			    );
+		 }
+	    
+	    
+	    
+	    
+	    private JdbcTemplate getJdbcTemplate() {
+			// TODO Auto-generated method stub
+			return null;
+		}
+
+
+		public restModel select_id1(int id)
 	    {
 	 
 	    	
